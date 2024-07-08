@@ -168,7 +168,7 @@ function App() {
   const [serverInfo, setServerInfo] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/server-info')
+    axios.get('https://q1-fog-assignment-backend.vercel.app/server-info')
       .then(response => {
         setServerInfo(response.data);
       })
