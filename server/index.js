@@ -47,5 +47,5 @@ app.get('/server-info', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}`);
+    console.log(`Server is running at https://q1-fog-assignment-backend.vercel.app/`);
 });
