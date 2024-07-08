@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const port = 3000;
+const port = 5000;
 
 app.use(cors({
   origin: 'https://q1-fog-assignment-frontend.vercel.app',
@@ -46,10 +46,14 @@ const serverInfo = {
     }
 };
 
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
 app.get('/server-info', (req, res) => {
     res.json(serverInfo);
 });
 
 app.listen(port, () => {
-    console.log(`Server is running at https://q1-fog-assignment-backend.vercel.app/`);
+    console.log(`Server is running`);
 });
