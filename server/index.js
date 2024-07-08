@@ -3,7 +3,11 @@ const app = express();
 const cors = require('cors');
 const port = 3000;
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://q1-fog-assignment-frontend.vercel.app',
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 
 const serverInfo = {
     players: "60/64",
