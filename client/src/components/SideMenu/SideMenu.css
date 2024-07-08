@@ -1,0 +1,89 @@
+.side-menu {
+  background: none;
+  width: 5vw; /* Increase width to accommodate images */
+  height: 100vh; 
+  display: block;
+  position: fixed;
+  margin-top: 17vh;
+  overflow: visible;
+  top: 0;
+  left: 0; /* Stick the sidebar to the left edge of the window */
+  right: auto;
+}
+
+.menu-item {
+  margin: 10px 0; 
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-decoration: none;
+  position: relative; /* Ensure the hover effect is positioned correctly */
+  display: flex; /* Use flexbox to handle image alignment */
+  align-items: center; /* Center align the image */
+  left: 0; /* Ensure the menu items are aligned to the left */
+}
+
+.menu-item img {
+  opacity: 0.5;
+  width: 50px; 
+  height: 50px;
+  object-fit: cover;
+  margin-left: 10px; 
+}
+
+.menu-item :hover {
+  opacity: 1;
+}
+
+.menu-item:hover::after {
+  content: 'Battlefield';
+  position: absolute;
+  left: 80px; 
+  background-color: black;
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.play-button, .menu-button, .power-button {
+  width: 50px; 
+  height: 50px; 
+  background-color: #555;
+  border: none;
+  cursor: pointer;
+}
+
+.play-button::before {
+  content: '\25B6'; 
+  color: white; 
+  font-size: 24px;
+}
+
+.menu-button::before {
+  content: '\2630'; 
+  color: white; 
+  font-size: 24px; 
+}
+
+.power-button::before {
+  content: '\23FB'; 
+  color: white; 
+  font-size: 24px; 
+}
+
+.menu-item-lower-container {
+  display: flex;
+  flex-direction: column;
+  width: 5rem;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 34vh;
+  margin-bottom: 10px;
+}
+
+.menu-item-lower {
+  height: 2vh;
+  width: 1vw;
+  
+}

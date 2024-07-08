@@ -1,0 +1,188 @@
+:root {
+  --primary-bg: #0a0a0a;
+  --primary-color: white;
+  --button-bg: #333;
+  --button-hover-bg: #444;
+  --container-padding: 2%;
+  --header-padding: 2em;
+  --font-size-large: 1.5em;
+  --font-size-small: 0.9em;
+  --button-padding: 1em 2em;
+  --gap: 1em;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; 
+}
+
+.App {
+  position: relative;
+  background: url(../public/images/menu__background.png);
+  background-size: cover;
+  color: var(--primary-color);
+  height: 100vh; 
+  box-sizing: border-box;
+  overflow: hidden; 
+}
+
+/* Create the dark overlay */
+.App::before {
+  content: '';
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.61); 
+  pointer-events: none; 
+  z-index: 1; 
+}
+
+/* Ensure content within .App sits above the overlay */
+.App * {
+  position: relative;
+  z-index: 2;
+}
+
+.App-header {
+  display: flex;
+  /* justify-content: space-between; */
+  /* Removed padding */
+}
+
+.side-menu-container {
+  height: 100vh;
+  border-right: 1px solid #444;
+  margin-right: 2em;
+  overflow: hidden;
+  padding: var(--container-padding); 
+}
+
+.server-container {
+  background: transparent;
+  width: 127vh;
+  height: 82.4vh;
+  border-bottom: 1px rgba(255, 255, 255, .1);
+  margin-top: 8vh;
+  overflow: auto;
+  padding: var(--container-padding); 
+}
+
+/* Customize the scrollbar */
+.server-container::-webkit-scrollbar {
+  width: 2px; 
+}
+
+.server-container::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+.server-container::-webkit-scrollbar-thumb {
+  background: white; 
+}
+
+.server-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.7); 
+}
+
+.server-info {
+  width: 100%;
+  max-width: 80rem; 
+  box-sizing: border-box;
+}
+
+.heading {
+  font-size: 3em;
+  margin-left: 1rem;
+}
+
+.server-title {
+  font-weight: bold;
+  font-size: 2em;
+  margin-top: var(--gap);
+}
+
+.server-details {
+  margin-bottom: calc(var(--gap) * 2);
+}
+
+.server-details .buttons {
+  display: flex;
+  gap: var(--gap);
+  margin-top: var(--gap);
+}
+
+.server-details button {
+  color: var(--primary-color);
+  background: none;
+  width: 28vh;
+  height: 4.8vh;
+  border: 1px solid rgba(255, 255, 255, .2);
+  justify-content: center;
+  align-items: center;
+  margin-right: 1vh;
+  display: flex;
+}
+
+.server-details button:hover {
+  background-color: var(--primary-color);
+  color: #0a0a0a;
+}
+
+.server-settings {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: calc(var(--gap) * 2);
+}
+
+.settings,
+.advanced,
+.rules {
+  font-weight: bold;
+  flex: 1 1 1;
+  margin-right: 2rem;
+  box-sizing: border-box;
+}
+
+.settings > div,
+.advanced > div,
+.rules > div {
+  margin-bottom: var(--gap);
+}
+
+.players-info {
+  display: flex;
+  flex: 1;
+  gap: 3em;
+}
+
+.players-info-values {
+  font-size: 1.7em !important;
+}
+
+.server-info div {
+  font-size: var(--font-size-small);
+}
+
+@media (max-width: 768px) {
+  .server-settings {
+    flex-direction: column;
+  }
+
+  .settings,
+  .advanced,
+  .rules {
+    flex: 1 1 100%;
+    margin: var(--gap) 0;
+  }
+}
+
+.map-rotation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 1rem;
+}
