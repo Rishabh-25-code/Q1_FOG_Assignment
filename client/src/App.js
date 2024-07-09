@@ -99,10 +99,10 @@ function App() {
               <div className="server-title">! RC3-BASEMAPS</div>
               <div className="server-info">
                 <div className="server-details">
-                  <div>CONQUEST LARGE · LANCANG DAM · CUSTOM · 60 HZ</div>
-                  <div>
+                  <div className='server-details-heading'>CONQUEST LARGE · LANCANG DAM · CUSTOM · 60 HZ</div>
+                  <div className='server-details-desc'>
                     Server protected by The, K-50 Anticheat. Vip !Rules,
-                    Questions, Request, Appeal, Visit us: www.epg.gg | Discord
+                    Questions, Request, Appeal, Visit us: www.epg.gg | Discord https://discord.gg/3r5NK4d
                   </div>
                   <div className="buttons">
                     <button>JOIN</button>
